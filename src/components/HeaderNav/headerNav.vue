@@ -17,16 +17,16 @@
 
 <script>
 export default {
-  name: "",
+  name: '',
   data() {
-    return {};
+    return {}
   },
 
   methods: {}
-};
+}
 </script>
 <style lang="css">
-@import "./headerNav.css";
+@import './headerNav.css';
 div {
   width: 100%;
 }
