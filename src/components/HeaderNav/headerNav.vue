@@ -10,7 +10,6 @@
         </nav>
       </div>
     </header>
-    <h1>这是头部的导航栏</h1>
   </div>
 </template>
 
@@ -24,6 +23,9 @@ export default {
   methods: {}
 };
 </script>
-<style lang="scss" scoped>
-// @import "./headerNav.css";
+<style lang="css">
+@import "./headerNav.css";
+div {
+  width: 100%;
+}
 </style>
