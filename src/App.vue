@@ -3,7 +3,7 @@
    <!-- 这里放置一个导航栏 -->
    <headerNav />
    <!-- <h1>这是app界面</h1> -->
-   <!-- <router-view></router-view> -->
+   <router-view></router-view>
  </div>
 </template>
 
