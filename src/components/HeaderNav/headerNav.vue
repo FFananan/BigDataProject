@@ -1,5 +1,5 @@
 <template>
-
+  <div>
     <header class="masthead mb-auto">
       <div class="inner">
         <h3 class="masthead-brand">Cover</h3>
@@ -11,7 +11,7 @@
       </div>
     </header>
     <!-- <h1>这是头部的导航栏</h1> -->
-  
+  </div>
 </template>
 
 <script>
