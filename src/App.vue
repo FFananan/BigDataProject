@@ -4,7 +4,7 @@
     <headerNav />
     <!-- <h1>这是app界面</h1> -->
     <div class="animateBox">
-      <transition mode="out-in">
+      <transition >
         <router-view></router-view>
       </transition>
     </div>

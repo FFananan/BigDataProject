@@ -5,7 +5,7 @@
       <ul class="nav flex-column">
         <li class="nav-item">
           <router-link
-            class="nav-link active"
+            class="nav-link"
             :to="path + '/intro'"
           >
             <span class="fa fa-home"></span>
@@ -13,12 +13,12 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            <span data-feather="file"></span>
-            Orders
-          </a>
+          <router-link class="nav-link" :to="path + '/background'">
+            <span class="fa fa-home"></span>
+            Background
+          </router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">
             <span data-feather="shopping-cart"></span>
             Products
@@ -80,7 +80,7 @@
             <span data-feather="file-text"></span>
             Year-end sale
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>

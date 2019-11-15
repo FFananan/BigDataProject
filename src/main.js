@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import animate from 'animate.css'
+
 
 import $ from 'jquery'
 import BootstrapVue from 'bootstrap-vue'
@@ -11,6 +13,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'font-awesome/css/font-awesome.css'
 
+Vue.use(animate);
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
