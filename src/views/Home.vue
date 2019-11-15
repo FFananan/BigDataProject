@@ -1,7 +1,8 @@
 <!--  -->
 <template>
-  <div>
-      <!-- <h1>HOME</h1> -->
+  <div class="home">
+      <h1>WELCOME TO THE PROJECT!</h1>
+      <h2>YOU HAVE TWO PROJECTS TO FINISH</h2>
   </div>
 </template>
 
@@ -18,4 +19,13 @@ export default {
 
 </script>
 <style lang='scss' scoped>
+.home{
+  background-color: #333;
+  height: 100%;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
 </style>
