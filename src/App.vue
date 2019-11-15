@@ -8,9 +8,7 @@
 </template>
 
 <script>
-// 使用feather-icons，要在app.js中导入，然后再在mounted调用一个replace的函数
 import headerNav from "./components/HeaderNav/headerNav";
-import feather from 'feather-icons';
 export default {
   name: "App",
   data() {
@@ -20,7 +18,7 @@ export default {
     headerNav
   },
   mounted() {
-    feather.replace();
+    
   },
 };
 </script>
