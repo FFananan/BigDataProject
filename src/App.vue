@@ -3,7 +3,11 @@
     <!-- 这里放置一个导航栏 -->
     <headerNav />
     <!-- <h1>这是app界面</h1> -->
-    <router-view></router-view>
+    <div class="animateBox">
+      <transition mode="out-in">
+        <router-view></router-view>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -17,9 +21,7 @@ export default {
   components: {
     headerNav
   },
-  mounted() {
-    
-  },
+  mounted() {}
 };
 </script>
 
@@ -30,5 +32,24 @@ body {
   color: #fff;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.animateBox {
+  width: 100%;
+  overflow: hidden;
+}
+.v-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.5s ease;
 }
 </style>
