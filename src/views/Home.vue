@@ -3,7 +3,7 @@
   <div class="home">
     <div class="content">
       <h1>WELCOME TO THE PROJECT!</h1>
-      <h6>YOU HAVE TWO PROJECTS TO FINISH</h6>
+      <h6>YOU HAVE TWO PROJECTS TO FINISH </h6>
       <h6>created by xxxx</h6>
     </div>
   </div>
