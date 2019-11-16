@@ -9,5 +9,9 @@ module.exports = {
                 Popper: ['popper.js', 'default']
             })
         ]
-    }
+    },
+    // 加这个配置才不会build之后路径错乱
+    publicPath: process.env.NODE_ENV === 'production'
+        ? './'
+        : '/'
 }
