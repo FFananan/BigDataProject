@@ -4,7 +4,7 @@
     <headerNav />
     <!-- <h1>这是app界面</h1> -->
     <div class="animateBox">
-      <transition >
+      <transition :name="transitionName" mode="out-in">
         <router-view></router-view>
       </transition>
     </div>
@@ -16,12 +16,24 @@ import headerNav from "./components/HeaderNav/headerNav";
 export default {
   name: "App",
   data() {
-    return {};
+    return {
+      transitionName: "right",
+      routeArr: ["/home", "/pro1/intro", "/pro2/intro"]
+    };
   },
+  methods: {},
   components: {
     headerNav
   },
-  mounted() {}
+  watch: {
+    $route: function(to, from) {
+      var compare;
+      compare =
+        this.routeArr.indexOf(to.path) > this.routeArr.indexOf(from.path);
+      console.log(compare);
+      this.transitionName = compare == true ? "right" : "left";
+    }
+  }
 };
 </script>
 
@@ -38,18 +50,33 @@ body {
   width: 100%;
   overflow: hidden;
 }
-.v-enter {
+.right-enter {
   opacity: 0;
   transform: translateX(100%);
 }
 
-.v-leave-to {
+.right-leave-to {
   opacity: 0;
   transform: translateX(-100%);
   position: absolute;
 }
-.v-enter-active,
-.v-leave-active {
+.right-enter-active,
+.right-leave-active {
+  transition: all 0.5s ease;
+}
+
+.left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+}
+
+.left-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.left-enter-active,
+.left-leave-active {
   transition: all 0.5s ease;
 }
 </style>
