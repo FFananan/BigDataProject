@@ -12,7 +12,7 @@
 <script>
 export default {
   name: "",
-  data () {
+  data() {
     return {};
   },
 
@@ -29,6 +29,5 @@ export default {
   display: flex;
   justify-content: space-around;
   position: fixed;
-  width: 100%;
 }
 </style>

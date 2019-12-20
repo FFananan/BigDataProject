@@ -4,8 +4,7 @@
     <headerNav />
     <!-- <h1>这是app界面</h1> -->
     <div class="animateBox">
-      <transition :name="transitionName"
-                  mode="out-in">
+      <transition :name="transitionName" mode="out-in">
         <router-view></router-view>
       </transition>
     </div>
@@ -16,7 +15,7 @@
 import headerNav from "./components/HeaderNav/headerNav";
 export default {
   name: "App",
-  data () {
+  data() {
     return {
       transitionName: "right",
       routeArr: ["/home", "/pro1/intro", "/pro2/intro"]
@@ -27,7 +26,7 @@ export default {
     headerNav
   },
   watch: {
-    $route: function (to, from) {
+    $route: function(to, from) {
       var compare;
       compare =
         this.routeArr.indexOf(to.path) > this.routeArr.indexOf(from.path);
