@@ -4,10 +4,7 @@
     <div class="sidebar-sticky">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <router-link
-            class="nav-link"
-            :to="path + '/intro'"
-          >
+          <router-link class="nav-link" :to="path + '/intro'">
             <span class="fa fa-home"></span>
             Introduction <span class="sr-only">(current)</span>
           </router-link>
@@ -16,6 +13,16 @@
           <router-link class="nav-link" :to="path + '/background'">
             <span class="fa fa-home"></span>
             Background
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link
+            class="nav-link"
+            :key="$route.fullPath"
+            :to="path + '/run'"
+          >
+            <span class="fa fa-home"></span>
+            Run
           </router-link>
         </li>
         <!-- <li class="nav-item">
@@ -89,16 +96,16 @@
 <script>
 export default {
   data() {
-    return {};
+    return {}
   },
 
   methods: {},
   // 获取到从父组件传递过来的根路径
   props: {
-    path: String,
+    path: String
   }
-};
+}
 </script>
 <style lang="scss" scoped>
-@import "./sideNav.css";
+@import './sideNav.css';
 </style>
