@@ -4,38 +4,43 @@
     <headerNav />
     <!-- <h1>这是app界面</h1> -->
     <div class="animateBox">
-      <transition :name="transitionName"
-                  mode="out-in">
-        <router-view></router-view>
+      <transition :name="transitionName" mode="out-in">
+        <router-view v-if="isRouterAlive"></router-view>
       </transition>
     </div>
   </div>
 </template>
 
 <script>
-import headerNav from "./components/HeaderNav/headerNav";
+import headerNav from './components/HeaderNav/headerNav'
 export default {
-  name: "App",
-  data () {
+  name: 'App',
+  data() {
     return {
-      transitionName: "right",
-      routeArr: ["/home", "/pro1/intro", "/pro2/intro"]
-    };
+      transitionName: 'right',
+      isRouterAlive: true,
+      routeArr: ['/home', '/pro1/intro', '/pro2/intro']
+    }
   },
-  methods: {},
+  methods: {
+    reload() {
+      this.isRouterAlive = false
+      this.$nextTick(() => (this.isRouterAlive = true))
+    }
+  },
   components: {
     headerNav
   },
   watch: {
-    $route: function (to, from) {
-      var compare;
+    $route: function(to, from) {
+      var compare
       compare =
-        this.routeArr.indexOf(to.path) > this.routeArr.indexOf(from.path);
-      console.log(compare);
-      this.transitionName = compare == true ? "right" : "left";
+        this.routeArr.indexOf(to.path) > this.routeArr.indexOf(from.path)
+      console.log(compare)
+      this.transitionName = compare == true ? 'right' : 'left'
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

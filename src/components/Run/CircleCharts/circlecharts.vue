@@ -24,45 +24,28 @@
     </div>
 
     <div class="get">
-
       <div class="arc">
         <span class="text">Greedy</span>
-        <input type="hidden"
-               class="percent"
-               value="26.25" />
-        <input type="hidden"
-               class="color"
-               value="#97BE0D" />
+        <input type="hidden" class="percent" value="26.25" />
+        <input type="hidden" class="color" value="#97BE0D" />
       </div>
 
       <div class="arc">
         <span class="text">Graph</span>
-        <input type="hidden"
-               class="percent"
-               value="25.35" />
-        <input type="hidden"
-               class="color"
-               value="#D84F5F" />
+        <input type="hidden" class="percent" value="25.35" />
+        <input type="hidden" class="color" value="#D84F5F" />
       </div>
 
       <div class="arc">
         <span class="text">G-cut</span>
-        <input type="hidden"
-               class="percent"
-               value="31.85" />
-        <input type="hidden"
-               class="color"
-               value="#88B8E6" />
+        <input type="hidden" class="percent" value="31.85" />
+        <input type="hidden" class="color" value="#88B8E6" />
       </div>
 
       <div class="arc">
         <span class="text">Geo-cut</span>
-        <input type="hidden"
-               class="percent"
-               value="16.65" />
-        <input type="hidden"
-               class="color"
-               value="#BEDBE9" />
+        <input type="hidden" class="percent" value="16.65" />
+        <input type="hidden" class="color" value="#BEDBE9" />
       </div>
 
       <!-- <div class="arc">
@@ -74,7 +57,6 @@
                class="color"
                value="#EDEBEE" />
       </div> -->
-
     </div>
   </div>
 </template>
@@ -85,11 +67,10 @@ import '../../../../static/js/init.js'
 import '../../../../static/js/ddlevelsmenu.js'
 
 export default {
-  data () {
-    return {};
+  data() {
+    return {}
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>
 
@@ -126,7 +107,7 @@ body {
   margin-top: 140px;
 }
 #content h1 {
-  font-family: "Cabin Sketch", arial, serif;
+  font-family: 'Cabin Sketch', arial, serif;
   text-shadow: 3px 3px 0 #ddd;
   color: #193340;
   font-size: 40px;
