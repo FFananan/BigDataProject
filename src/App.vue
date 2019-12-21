@@ -30,7 +30,6 @@ export default {
       var compare;
       compare =
         this.routeArr.indexOf(to.path) > this.routeArr.indexOf(from.path);
-      console.log(compare);
       this.transitionName = compare == true ? "right" : "left";
     }
   }

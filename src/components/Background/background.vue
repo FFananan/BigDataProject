@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <div>
-    <h1>这是背景介绍的组件</h1>
+    <h1>这是{{ path }}的背景介绍的组件</h1>
   </div>
 </template>
 
@@ -10,8 +10,8 @@ export default {
   data() {
     return {};
   },
-
-  methods: {}
+  methods: {},
+  props: ["path"]
 };
 </script>
 <style lang="scss" scoped></style>
