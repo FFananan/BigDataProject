@@ -24,7 +24,7 @@
     <div class="graph">
       <h1 class="title">预留文本框</h1>
       <horizontalbars class="hori-bars" />
-      <circlebars />
+      <circlecharts />
     </div>
 
   </div>
@@ -32,7 +32,7 @@
 
 <script>
 import horizontalbars from "./HorizontalBars/horizontalbars";
-import circlebars from "./CircleBars/circlebars"
+import circlecharts from "./CircleCharts/circlecharts"
 
 export default {
   data () {
@@ -43,7 +43,7 @@ export default {
 
   components: {
     horizontalbars,
-    circlebars
+    circlecharts
   },
 };
 </script>
