@@ -3,28 +3,16 @@
   <div class="wrapper">
     <!-- <h1>运行</h1> -->
     <div class="row botton-group">
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(1)">
-          WV(WikiVote)
-        </button>
-      </div>
-
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(2)">
-          GW(GoogleWeb)
-        </button>
-      </div>
-
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(3)">
-          LJ(LiveJournal)
+      <div class="botton-item col-md-4" v-for="(item, index) in btnValue" :key='index'>
+        <button type="button" class="btn btn-primary" @click="switchCharts(index+1)">
+          {{item}}
         </button>
       </div>
     </div>
 
     <div class="separator" />
-    <div class="graph" v-if="btnIndex === 0 ? false : true">
-      
+    <div class="graph">
+       <!-- v-if="btnIndex === 0 ? false : true" -->
       <h1 class="title">
         预留文本框
       </h1>
@@ -45,6 +33,7 @@ import circlecharts from './CircleCharts/circlecharts'
 export default {
   data() {
     return {
+      btnValue: ['WV(WikiVote)', 'GW(GoogleWeb)', 'LJ(LiveJournal)'],
       hackReset: true,
       btnIndex: 0,
       // index 123对应wv gw lj 二维数组内容分别代表baseline greedy graph G-cut Geo-cut

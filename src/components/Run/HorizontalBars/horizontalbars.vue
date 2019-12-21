@@ -18,8 +18,6 @@ export default {
   props: ['time'],
   methods: {
     draw() {
-      console.log(this.data);
-
       // 初始化echarts实例
       // let myChart = this.$echarts.init(document.getElementById('myChart'))
       let myChart = echarts.init(document.getElementById('myChart'))
