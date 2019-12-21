@@ -11,7 +11,7 @@
         </li>
         <li class="nav-item">
           <router-link class="nav-link" :to="path + '/background'">
-            <span class="fa fa-home"></span>
+            <span class="fa fa-users"></span>
             Background
           </router-link>
         </li>
@@ -21,7 +21,7 @@
             :key="$route.fullPath"
             :to="path + '/run'"
           >
-            <span class="fa fa-home"></span>
+            <span class="fa fa-bar-chart"></span>
             Run
           </router-link>
         </li>
