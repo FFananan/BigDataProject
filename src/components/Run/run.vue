@@ -3,21 +3,17 @@
   <div class="wrapper">
     <!-- <h1>运行</h1> -->
     <div class="row botton-group">
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(1)">
-          WV(WikiVote)
-        </button>
-      </div>
-
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(2)">
-          GW(GoogleWeb)
-        </button>
-      </div>
-
-      <div class="botton-item col-md-4">
-        <button type="button" class="btn btn-primary" @click="switchCharts(3)">
-          LJ(LiveJournal)
+      <div
+        class="botton-item col-md-4"
+        v-for="(item, index) in btnValue"
+        :key="index"
+      >
+        <button
+          type="button"
+          class="btn btn-primary"
+          @click="switchCharts(index + 1)"
+        >
+          {{ item }}
         </button>
       </div>
     </div>
@@ -51,6 +47,7 @@ import piecharts from './PieCharts/piecharts'
 export default {
   data() {
     return {
+      btnValue: ['WV(WikiVote)', 'GW(GoogleWeb)', 'LJ(LiveJournal)'],
       hackReset: true,
       btnIndex: 0,
       pageIndex: 0,

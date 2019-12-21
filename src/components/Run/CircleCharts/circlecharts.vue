@@ -26,25 +26,25 @@
     <div class="get">
       <div class="arc">
         <span class="text">Greedy</span>
-        <input type="hidden" class="percent" value="cost[0]" />
+        <input type="hidden" class="percent" v-model="graphData[0]" />
         <input type="hidden" class="color" value="#97BE0D" />
       </div>
 
       <div class="arc">
         <span class="text">Graph</span>
-        <input type="hidden" class="percent" value="cost[1]" />
+        <input type="hidden" class="percent" v-model="graphData[1]" />
         <input type="hidden" class="color" value="#D84F5F" />
       </div>
 
       <div class="arc">
         <span class="text">G-cut</span>
-        <input type="hidden" class="percent" value="cost[2]" />
+        <input type="hidden" class="percent" v-model="graphData[2]" />
         <input type="hidden" class="color" value="#88B8E6" />
       </div>
 
       <div class="arc">
         <span class="text">Geo-cut</span>
-        <input type="hidden" class="percent" value="cost[3]" />
+        <input type="hidden" class="percent" v-model="graphData[3]" />
         <input type="hidden" class="color" value="#BEDBE9" />
       </div>
 
@@ -62,18 +62,32 @@
 </template>
 
 <script>
-// import '../../../../static/js/raphael.js'
-// import '../../../../static/js/init.js'
+import "../../../../static/js/jquery.js";
+import "../../../../static/js/raphael.js";
+import "../../../../static/js/init.js";
 // import '../../../../static/js/ddlevelsmenu.js'
 
+
 export default {
-  props: ['cost'],
   data() {
     return {
+      graphData: this.cost
+    };
+  },
+  methods: {},
+  props: ["cost"],
+  watch: {
+    cost: function(newValue, oldValue) {
+      console.log(newValue);
+      console.log('oldValue :', oldValue);
+      this.graphData = newValue;
+      console.log(this.graphData);
     }
   },
-  methods: {}
-}
+  mounted() {
+    console.log(this.graphData);
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -109,7 +123,7 @@ body {
   margin-top: 140px;
 }
 #content h1 {
-  font-family: 'Cabin Sketch', arial, serif;
+  font-family: "Cabin Sketch", arial, serif;
   text-shadow: 3px 3px 0 #ddd;
   color: #193340;
   font-size: 40px;
