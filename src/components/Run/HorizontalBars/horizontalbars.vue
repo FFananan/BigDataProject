@@ -8,8 +8,7 @@ const echarts = require('echarts')
 
 export default {
   data() {
-    return {
-    }
+    return {}
   },
   updated() {
     // console.log( time: ', this.time)
@@ -18,7 +17,7 @@ export default {
   props: ['time'],
   methods: {
     draw() {
-      console.log(this.data);
+      // console.log(this.data)
 
       // 初始化echarts实例
       // let myChart = this.$echarts.init(document.getElementById('myChart'))
@@ -81,7 +80,7 @@ export default {
                     '#88b8e6',
                     '#d84f5f',
                     '#97be0d',
-                    '#edebee'
+                    '#C0C0C0'
                   ]
                   return colorList[params.dataIndex]
                 }
@@ -105,10 +104,10 @@ export default {
     }
   },
   watch: {
-    'time': function(newTime, oldTime) {
+    time: function(newTime, oldTime) {
       // console.log("oldtime: " + oldTime);
       // this.data = newTime;
-      this.draw();
+      this.draw()
     }
   },
   mounted() {
