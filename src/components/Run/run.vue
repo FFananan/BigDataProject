@@ -24,6 +24,7 @@
 
     <div class="separator" />
     <div class="graph" v-if="btnIndex === 0 ? false : true">
+      
       <h1 class="title">
         预留文本框
       </h1>
@@ -65,7 +66,7 @@ export default {
   methods: {
     switchCharts(index) {
       this.btnIndex = index
-      this.reload()
+      // this.reload()
     },
     reload() {
       this.hackReset = false

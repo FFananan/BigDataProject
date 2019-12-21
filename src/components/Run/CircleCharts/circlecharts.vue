@@ -62,14 +62,15 @@
 </template>
 
 <script>
-import '../../../../static/js/raphael.js'
-import '../../../../static/js/init.js'
-import '../../../../static/js/ddlevelsmenu.js'
+// import '../../../../static/js/raphael.js'
+// import '../../../../static/js/init.js'
+// import '../../../../static/js/ddlevelsmenu.js'
 
 export default {
   props: ['cost'],
   data() {
-    return {}
+    return {
+    }
   },
   methods: {}
 }

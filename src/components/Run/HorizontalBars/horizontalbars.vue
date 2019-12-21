@@ -7,22 +7,19 @@
 const echarts = require('echarts')
 
 export default {
-  props: ['time'],
   data() {
-    return {}
-  },
-  mounted() {
-    // let myChart = echarts.init(document.getElementById('myChart'))
-    // myChart.dispose()
-    this.draw()
+    return {
+    }
   },
   updated() {
     // console.log( time: ', this.time)
     // this.draw()
   },
-
+  props: ['time'],
   methods: {
     draw() {
+      console.log(this.data);
+
       // 初始化echarts实例
       // let myChart = this.$echarts.init(document.getElementById('myChart'))
       let myChart = echarts.init(document.getElementById('myChart'))
@@ -101,11 +98,23 @@ export default {
       }
 
       //防止越界，重绘canvas
-      myChart.clear()
-      myChart.dispose()
-      window.onresize = myChart.resize
+      // myChart.clear()
+      // myChart.dispose()
+      // window.onresize = myChart.resize
       myChart.setOption(option) //设置option
     }
+  },
+  watch: {
+    'time': function(newTime, oldTime) {
+      // console.log("oldtime: " + oldTime);
+      // this.data = newTime;
+      this.draw();
+    }
+  },
+  mounted() {
+    // let myChart = echarts.init(document.getElementById('myChart'))
+    // myChart.dispose()
+    this.draw()
   }
 }
 </script>
