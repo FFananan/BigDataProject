@@ -7,6 +7,8 @@
 const echarts = require('echarts')
 
 export default {
+  props: ['time'],
+
   data() {
     return {}
   },
@@ -14,9 +16,9 @@ export default {
     // console.log( time: ', this.time)
     // this.draw()
   },
-  props: ['time'],
   methods: {
     draw() {
+      const self = this
       // console.log(this.data)
 
       // 初始化echarts实例
@@ -91,13 +93,26 @@ export default {
                 shadowOffsetX: 0,
                 shadowColor: 'rgba(0, 0, 0, 0.5)'
               }
+            },
+            animationDelay: function(idx) {
+              const params = [200, 400, 600, 800, 1000]
+              // console.log('self.sortArray', self.sortArray)
+              // console.log('this time is', self.time[idx])
+              const index = self.sortArray.indexOf(self.time[idx])
+              // console.log('index is', index)
+              // console.log('self.time', self.time)
+              return params[index]
             }
           }
         ]
+        // animationEasing: 'elasticOut',
+        // animationDelayUpdate: function(idx) {
+        //   return idx * 5
+        // }
       }
 
       //防止越界，重绘canvas
-      // myChart.clear()
+      myChart.clear()
       // myChart.dispose()
       // window.onresize = myChart.resize
       myChart.setOption(option) //设置option
@@ -107,7 +122,15 @@ export default {
     time: function(newTime, oldTime) {
       // console.log("oldtime: " + oldTime);
       // this.data = newTime;
+      // this.sortArray = this.time.sort()
+      // console.log('watch this.sortArray', this.sortArray)
       this.draw()
+    }
+  },
+  computed: {
+    sortArray() {
+      console.log('sort', this.time.sort())
+      return this.time.sort()
     }
   },
   mounted() {

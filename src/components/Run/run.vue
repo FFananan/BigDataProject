@@ -41,7 +41,7 @@
 
 <script>
 import horizontalbars from './HorizontalBars/horizontalbars'
-import circlecharts from './CircleCharts/circlecharts'
+// import circlecharts from './CircleCharts/circlecharts'
 import piecharts from './PieCharts/piecharts'
 
 export default {
@@ -100,7 +100,7 @@ export default {
 
   components: {
     horizontalbars,
-    circlecharts,
+    // circlecharts,
     piecharts
   }
 }
